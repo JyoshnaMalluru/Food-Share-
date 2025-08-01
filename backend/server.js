@@ -9,10 +9,12 @@ const PORT = 5000 || process.env.PORT;
 app.use(cors());
 app.use(express.json());
 app.set('view engine', 'ejs');
+app.get("/", (req, res) => {
+  res.send("API is working");
+});
 app.use("/api/foodposts", require("./routes/food"));
 app.use("/api/users", require("./routes/user"));   
 app.use('/uploads', express.static('uploads'));
-
 
 connectDB();
 app.listen(PORT, () => {
