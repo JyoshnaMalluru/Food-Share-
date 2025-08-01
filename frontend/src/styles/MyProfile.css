@@ -1,0 +1,107 @@
+/* Container */
+.profile-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Card Design */
+.profile-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center; /* ✅ Center all text inside the card */
+  transition: 0.3s ease;
+}
+
+/* Header Section */
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* Avatar Icon */
+.profile-avatar {
+  font-size: 3rem;
+  color: #555;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  padding: 1rem;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* Name and Role */
+.profile-card h2 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  color: #2c3e50;
+}
+
+.profile-role {
+  text-transform: capitalize;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+ .profile-details {
+  display: grid;
+  grid-template-columns: 1fr; /* One column per row */
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.detail-item {
+  display: grid;
+  grid-template-columns: 150px 1fr; /* fixed label width, value fills remaining */
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+
+/* Role Styling */
+.role-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  display: inline-block;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.role-badge.donor {
+  background-color: #d5f4e6;
+  color: #27ae60;
+}
+
+.role-badge.receiver {
+  background-color: #fef9e7;
+  color: #f39c12;
+}
+
+.role-badge.volunteer {
+  background-color: #e8f4f8;
+  color: #3498db;
+}
+
+.role-badge.admin {
+  background-color: #fadbd8;
+  color: #e74c3c;
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.5rem;
+  color: #888;
+}

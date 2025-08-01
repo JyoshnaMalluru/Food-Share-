@@ -1,0 +1,562 @@
+.dashboard-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.dashboard-container h2 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.dashboard-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-card h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.dashboard-card p {
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.dashboard-card .btn {
+    width: 100%;
+}
+
+/* Add these new styles to your existing Dashboard.css */
+
+/* Dashboard Header */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.dashboard-header h2 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.stat-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.stat-card.picked::before {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+.stat-card.delivered::before {
+    background: linear-gradient(135deg, #27ae60, #229954);
+}
+
+.stat-card.pending::before {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card h3 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.stat-card p {
+    color: #7f8c8d;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Donations/Requests/Assignments Sections */
+.donations-section,
+.requests-section,
+.assignments-section {
+    margin-top: 3rem;
+}
+
+.donations-section h3,
+.requests-section h3,
+.assignments-section h3 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.donations-grid,
+.requests-grid,
+.assignments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.donation-card,
+.request-card,
+.assignment-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.donation-card:hover,
+.request-card:hover,
+.assignment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.donation-image,
+.request-image,
+.assignment-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.donation-details,
+.request-details,
+.assignment-details {
+    padding: 1.5rem;
+}
+
+.donation-details h4,
+.request-details h4,
+.assignment-details h4 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.donation-details p,
+.request-details p,
+.assignment-details p {
+    margin-bottom: 0.75rem;
+    color: #5d6d7e;
+    line-height: 1.5;
+}
+
+.donation-details strong,
+.request-details strong,
+.assignment-details strong {
+    color: #34495e;
+    font-weight: 600;
+}
+
+/* Info Boxes */
+.requester-info,
+.volunteer-info,
+.donor-info,
+.receiver-info {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    border-left: 4px solid #3498db;
+}
+
+.requester-info {
+    border-left-color: #27ae60;
+}
+
+.volunteer-info {
+    border-left-color: #f39c12;
+}
+
+.donor-info {
+    border-left-color: #e74c3c;
+}
+
+.receiver-info {
+    border-left-color: #9b59b6;
+}
+
+/* Assignment Actions */
+.assignment-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.assignment-actions .btn {
+    flex: 1;
+    min-width: 150px;
+}
+
+/* No Content States */
+.no-assignments,
+.no-donations,
+.no-requests {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border: 2px dashed #bdc3c7;
+}
+
+.no-assignments p,
+.no-donations p,
+.no-requests p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin: 0;
+}
+
+/* Additional Button Styles */
+.btn-warning {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: white;
+}
+
+.btn-warning:hover {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .donations-grid,
+    .requests-grid,
+    .assignments-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .assignment-actions {
+        flex-direction: column;
+    }
+    
+    .assignment-actions .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-card {
+        padding: 1.5rem;
+    }
+    
+    .stat-card h3 {
+        font-size: 2rem;
+    }
+}
+
+
+.workflow-progress {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.workflow-steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.workflow-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex: 1;
+}
+
+.step-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e9ecef;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.step-circle.active {
+    background: #28a745;
+    color: white;
+    border-color: #28a745;
+}
+
+.step-label {
+    font-size: 0.8rem;
+    color: #6c757d;
+    text-align: center;
+    font-weight: 500;
+}
+
+.step-label.active {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.step-line {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background: #e9ecef;
+    z-index: -1;
+}
+
+.step-line.completed {
+    background: #28a745;
+}
+
+.workflow-step:last-child .step-line {
+    display: none;
+}
+
+/* Responsive workflow */
+@media (max-width: 768px) {
+    .workflow-steps {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .step-line {
+        display: none;
+    }
+    
+    .workflow-step {
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+        gap: 1rem;
+    }
+    
+    .step-circle {
+        margin-bottom: 0;
+        width: 35px;
+        height: 35px;
+    }
+    
+    .step-label {
+        text-align: left;
+    }
+}
+
+/* Add these additional styles to Dashboard.css */
+
+.not-assigned {
+    color: #6c757d;
+    font-style: italic;
+}
+
+.status-note {
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.status-note {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    color: #856404;
+}
+
+.status-note.completed {
+    background: #d1ecf1;
+    border: 1px solid #bee5eb;
+    color: #0c5460;
+}
+
+.status-note p {
+    margin: 0;
+    font-weight: 500;
+}
+
+.assignment-created {
+    font-size: 0.9rem;
+    color: #6c757d;
+    border-top: 1px solid #e9ecef;
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+.help-text {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.help-list {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.help-list li {
+    margin-bottom: 0.25rem;
+}
+
+/* Donor and Receiver Info Cards */
+.donor-info,
+.receiver-info {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    border-left: 4px solid #3498db;
+}
+
+.donor-info {
+    border-left-color: #e74c3c;
+}
+
+.receiver-info {
+    border-left-color: #27ae60;
+}
+
+.donor-info p,
+.receiver-info p {
+    margin-bottom: 0.5rem;
+}
+
+.donor-info p:last-child,
+.receiver-info p:last-child {
+    margin-bottom: 0;
+}
+
+/* Assignment Actions Button Styling */
+.assignment-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.assignment-actions .btn {
+    width: 100%;
+    padding: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.assignment-actions .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design for Volunteer Dashboard */
+@media (max-width: 768px) {
+    .assignments-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .assignment-actions {
+        margin-top: 1rem;
+    }
+    
+    .donor-info,
+    .receiver-info {
+        padding: 0.75rem;
+        margin: 0.75rem 0;
+    }
+}

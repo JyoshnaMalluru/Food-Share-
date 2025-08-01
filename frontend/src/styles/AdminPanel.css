@@ -1,0 +1,134 @@
+.admin-container {
+    max-width: 100%;
+    width: 95%;
+    margin: 2rem auto;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* Header */
+.admin-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    flex: 1 1 200px;
+    min-width: 200px;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+/* Section Titles */
+.admin-section h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Posts Table */
+.posts-table-container {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+}
+
+.posts-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    min-width: 900px;
+}
+
+.posts-table th,
+.posts-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Form */
+.assign-volunteer-form {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.form-group select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.assign-btn {
+    margin-top: 2rem;
+    padding: 0.6rem 1rem;
+    font-weight: 500;
+    border-radius: 6px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.assign-btn:hover {
+    background-color: #43a047;
+}
+
+/* Volunteers */
+.volunteers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.volunteer-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .assign-volunteer-form {
+        grid-template-columns: 1fr;
+    }
+
+    .posts-table th,
+    .posts-table td {
+        font-size: 0.85rem;
+        padding: 0.5rem;
+    }
+
+    .admin-container h2 {
+        font-size: 2rem;
+    }
+
+    .admin-section h3 {
+        font-size: 1.5rem;
+    }
+
+    .stat-card {
+        min-width: 100%;
+    }
+
+    .assign-btn {
+        width: 100%;
+    }
+}
