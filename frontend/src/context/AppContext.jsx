@@ -8,7 +8,7 @@ export const AppContext = createContext();
 const AppContextProvider = (props) => {
     // const backendUrl = import.meta.env.VITE_BACKEND_URL;
     // const backendUrl = process.env.NODE_ENV === 'production' ? servers.prod : servers.dev;
-    const backendUrl = import.meta.env.NODE_ENV === 'production'
+    const backendUrl = import.meta.env.MODE === 'production'
   ? import.meta.env.VITE_BACKEND_URL_PROD
   : import.meta.env.VITE_BACKEND_URL_DEV;
     const [authToken, setAuthToken] = useState(localStorage.getItem('authToken') || '');
