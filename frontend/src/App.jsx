@@ -8,7 +8,7 @@ import Login from './pages/Login';
 import AvailableFood from './pages/AvailableFood';
 import DonateForm from './pages/DonateForm.jsx';
 import MyPosts from './pages/MyPosts';
-import ReceiverDashboard from './pages/ReceiverDashboard';
+import ReceiverDashboard from './pages/ReceiverDashBoard';
 import DonorDashboard from './pages/DonorDashboard';
 import AdminPanel from './pages/AdminPanel';
 import VolunteerDashboard from './pages/VolunteerDashboard'; // ADD THIS
