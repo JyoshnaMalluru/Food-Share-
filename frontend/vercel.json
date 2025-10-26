@@ -1,0 +1,15 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://food-share-neighbourly-backend.onrender.com/:path*"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/old-page",
+      "destination": "/new-page",
+      "permanent": true
+    }
+  ]
+}
